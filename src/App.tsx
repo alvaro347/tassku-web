@@ -1,9 +1,14 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home.tsx'
+
 function App() {
-  return (
-    <main>
-      <h1>Tassku</h1>
-    </main>
-  )
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
 export default App
