@@ -1,0 +1,104 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-sticky);
+    background-color: color-mix(in srgb, var(--color-background) 80%, transparent);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-md) var(--space-xl);
+    height: 56px;
+}
+
+.logo {
+    font-size: var(--text-xl);
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+}
+
+.desktopNav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.link {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-text-secondary);
+    transition: color var(--duration-fast) var(--easing-standard);
+
+    &:hover {
+        color: var(--color-text);
+    }
+}
+
+.mobileActions {
+    display: none;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.hamburger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    color: var(--color-text-secondary);
+
+    &:hover {
+        background-color: var(--color-surface-hover);
+    }
+}
+
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    padding: var(--space-sm) var(--space-xl) var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+    background-color: color-mix(in srgb, var(--color-background) 95%, transparent);
+}
+
+.mobileLink {
+    display: block;
+    padding: var(--space-md) 0;
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+    color: var(--color-text-secondary);
+    border-bottom: 1px solid var(--color-border-subtle);
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:hover {
+        color: var(--color-text);
+    }
+}
+
+@media (max-width: 768px) {
+    .desktopNav {
+        display: none;
+    }
+
+    .mobileActions {
+        display: flex;
+    }
+
+    .mobileMenu {
+        display: flex;
+    }
+}
