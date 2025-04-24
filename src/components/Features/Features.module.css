@@ -1,0 +1,33 @@
+.header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.title {
+    margin-bottom: var(--space-md);
+}
+
+.subtitle {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
