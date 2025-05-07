@@ -1,9 +1,20 @@
+import Navbar from '../components/Navbar/Navbar'
+import Hero from '../components/Hero/Hero'
+import Features from '../components/Features/Features'
+import Pricing from '../components/Pricing/Pricing'
+import DownloadCta from '../components/DownloadCta/DownloadCta'
+import Footer from '../components/Footer/Footer'
+
 function Home() {
     return (
-        <main>
-            <h1>Tassku</h1>
-            <p>Your tasks, finally in order.</p>
-        </main>
+        <>
+            <Navbar />
+            <Hero />
+            <Features />
+            <Pricing />
+            <DownloadCta />
+            <Footer />
+        </>
     )
 }
 
