@@ -3,7 +3,7 @@ import Home from './pages/Home.tsx'
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
             <Routes>
                 <Route path="/" element={<Home />} />
             </Routes>
