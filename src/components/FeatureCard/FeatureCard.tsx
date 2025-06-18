@@ -5,14 +5,22 @@ interface FeatureCardProps {
     icon: ReactNode
     title: string
     description: string
+    mockup?: ReactNode
 }
 
-function FeatureCard({ icon, title, description }: FeatureCardProps) {
+function FeatureCard({ icon, title, description, mockup }: FeatureCardProps) {
     return (
         <div className={styles.card}>
-            <div className={styles.iconWrap}>{icon}</div>
-            <h3 className={styles.title}>{title}</h3>
-            <p className={styles.description}>{description}</p>
+            {mockup && (
+                <div className={styles.mockupArea}>
+                    {mockup}
+                </div>
+            )}
+            <div className={styles.body}>
+                <div className={styles.iconWrap}>{icon}</div>
+                <h3 className={styles.title}>{title}</h3>
+                <p className={styles.description}>{description}</p>
+            </div>
         </div>
     )
 }

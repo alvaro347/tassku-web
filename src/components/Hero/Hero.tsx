@@ -1,4 +1,5 @@
 import Button from '../Button/Button'
+import AppMockup from '../AppMockup/AppMockup'
 import styles from './Hero.module.css'
 
 function Hero() {
@@ -15,13 +16,20 @@ function Hero() {
                     productive — even offline.
                 </p>
                 <div className={styles.actions}>
-                    <Button variant="primary" size="lg">
-                        Download
-                    </Button>
-                    <Button variant="secondary" size="lg">
-                        Learn More
-                    </Button>
+                    <a href="#download">
+                        <Button variant="primary" size="lg">
+                            Coming Soon
+                        </Button>
+                    </a>
+                    <a href="#features">
+                        <Button variant="secondary" size="lg">
+                            Learn More
+                        </Button>
+                    </a>
                 </div>
+            </div>
+            <div className={styles.mockup}>
+                <AppMockup />
             </div>
         </div>
     )

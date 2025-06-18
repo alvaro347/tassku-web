@@ -1,6 +1,7 @@
 import { Monitor, ListTodo, Users, WifiOff } from 'lucide-react'
 import Section from '../Section/Section'
 import FeatureCard from '../FeatureCard/FeatureCard'
+import { PlatformMockup, OrganizeMockup, CollaborateMockup, OfflineMockup } from '../FeatureMockup'
 import { features } from '../../data/features'
 import styles from './Features.module.css'
 
@@ -9,6 +10,13 @@ const ICONS = {
     ListTodo: <ListTodo size={20} />,
     Users: <Users size={20} />,
     WifiOff: <WifiOff size={20} />,
+}
+
+const MOCKUPS = {
+    Monitor: <PlatformMockup />,
+    ListTodo: <OrganizeMockup />,
+    Users: <CollaborateMockup />,
+    WifiOff: <OfflineMockup />,
 }
 
 function Features() {
@@ -27,6 +35,7 @@ function Features() {
                         icon={ICONS[feature.iconName]}
                         title={feature.title}
                         description={feature.description}
+                        mockup={MOCKUPS[feature.iconName]}
                     />
                 ))}
             </div>
