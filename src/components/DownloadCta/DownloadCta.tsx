@@ -1,4 +1,3 @@
-import Button from '../Button/Button'
 import Section from '../Section/Section'
 import styles from './DownloadCta.module.css'
 
@@ -6,13 +5,23 @@ function DownloadCta() {
     return (
         <Section id="download" className={styles.section}>
             <div className={styles.content}>
-                <h2 className={styles.title}>Ready to take control of your tasks?</h2>
+                <h2 className={styles.title}>We're building something great.</h2>
                 <p className={styles.subtitle}>
-                    Join thousands of people who organize their work with Tassku.
+                    Tassku is currently in development. Sign up to be notified when
+                    it's ready.
                 </p>
-                <Button variant="primary" size="lg">
-                    Download for Free
-                </Button>
+                <div className={styles.notify}>
+                    <input
+                        type="email"
+                        placeholder="you@example.com"
+                        className={styles.emailInput}
+                        disabled
+                    />
+                    <button className={styles.notifyButton} disabled>
+                        Notify Me
+                    </button>
+                </div>
+                <span className={styles.comingSoon}>Coming Soon</span>
             </div>
         </Section>
     )

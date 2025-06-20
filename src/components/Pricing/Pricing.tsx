@@ -11,8 +11,9 @@ function Pricing() {
                 <p className={styles.subtitle}>
                     Start free. Upgrade when you need sync and collaboration.
                 </p>
+                <span className={styles.badge}>Coming Soon</span>
             </div>
-            <div className={styles.grid}>
+            <div className={`${styles.grid} ${styles.preview}`}>
                 {pricingTiers.map(tier => (
                     <PricingCard key={tier.name} {...tier} />
                 ))}
