@@ -17,37 +17,52 @@
 .mockupArea {
     border-bottom: 1px solid var(--color-border-subtle);
     background-color: var(--color-surface-elevated);
-    padding: var(--space-md);
-    min-height: 140px;
+    padding: var(--space-lg);
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .body {
-    padding: var(--space-xl);
+    padding: var(--space-lg);
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .iconWrap {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border-radius: var(--radius-md);
     background-color: var(--color-accent-subtle);
     color: var(--color-accent);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-sm);
 }
 
 .title {
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     font-weight: var(--weight-semibold);
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs);
 }
 
 .description {
     font-size: var(--text-sm);
     color: var(--color-text-muted);
     line-height: var(--leading-relaxed);
+}
+
+@media (max-width: 768px) {
+    .mockupArea {
+        height: 170px;
+    }
+
+    .body {
+        height: auto;
+    }
 }

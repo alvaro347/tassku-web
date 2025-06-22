@@ -8,25 +8,21 @@ export const features: Feature[] = [
     {
         iconName: 'Monitor',
         title: 'Everywhere you are',
-        description:
-            'Available on Android, iOS, Web, and Desktop. Your tasks follow you across every device.',
+        description: 'Android, iOS, Web, and Desktop — all in sync.',
     },
     {
         iconName: 'ListTodo',
         title: 'Organize your way',
-        description:
-            'Projects, labels, priorities, and due dates. Structure your work the way that makes sense to you.',
+        description: 'Projects, labels, priorities, and due dates.',
     },
     {
         iconName: 'Users',
         title: 'Collaborate seamlessly',
-        description:
-            'Share projects with your team, assign roles, and stay in sync with real-time updates.',
+        description: 'Share projects and stay in sync with your team.',
     },
     {
         iconName: 'WifiOff',
         title: 'Works offline',
-        description:
-            'Keep working without an internet connection. Your changes sync automatically when you\'re back online.',
+        description: 'Keep working offline. Syncs when you reconnect.',
     },
 ]

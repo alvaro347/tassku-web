@@ -1,7 +1,7 @@
 .section {
     background-color: var(--color-surface);
     border-top: 1px solid var(--color-border-subtle);
-    border-bottom: 1px solid var(--color-border-subtle);
+    margin-bottom: 80px;
 }
 
 .content {
