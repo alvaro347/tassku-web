@@ -18,8 +18,10 @@ function FeatureCard({ icon, title, description, mockup }: FeatureCardProps) {
             )}
             <div className={styles.body}>
                 <div className={styles.iconWrap}>{icon}</div>
-                <h3 className={styles.title}>{title}</h3>
-                <p className={styles.description}>{description}</p>
+                <div className={styles.text}>
+                    <h3 className={styles.title}>{title}</h3>
+                    <p className={styles.description}>{description}</p>
+                </div>
             </div>
         </div>
     )
