@@ -11,11 +11,6 @@ interface FeatureCardProps {
 function FeatureCard({ icon, title, description, mockup }: FeatureCardProps) {
     return (
         <div className={styles.card}>
-            {mockup && (
-                <div className={styles.mockupArea}>
-                    {mockup}
-                </div>
-            )}
             <div className={styles.body}>
                 <div className={styles.iconWrap}>{icon}</div>
                 <div className={styles.text}>
@@ -23,6 +18,11 @@ function FeatureCard({ icon, title, description, mockup }: FeatureCardProps) {
                     <p className={styles.description}>{description}</p>
                 </div>
             </div>
+            {mockup && (
+                <div className={styles.mockupArea}>
+                    {mockup}
+                </div>
+            )}
         </div>
     )
 }
