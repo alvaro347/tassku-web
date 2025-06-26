@@ -55,7 +55,7 @@
 
 /* Desktop */
 .desktopFrame {
-    width: 280px;
+    width: 260px;
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid var(--color-border);
@@ -231,7 +231,7 @@
 
 .orgPanel {
     width: 100%;
-    max-width: 340px;
+    max-width: 320px;
     border: 1px solid var(--color-border);
     border-radius: 10px;
     overflow: hidden;
@@ -376,7 +376,7 @@
 
 .collabCard {
     width: 100%;
-    max-width: 340px;
+    max-width: 320px;
     border: 1px solid var(--color-border);
     border-radius: 10px;
     overflow: hidden;
@@ -547,7 +547,7 @@
 
 .offlineCard {
     width: 100%;
-    max-width: 340px;
+    max-width: 320px;
     border: 1px solid var(--color-border);
     border-radius: 10px;
     overflow: hidden;

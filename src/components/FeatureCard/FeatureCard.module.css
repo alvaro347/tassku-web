@@ -15,14 +15,14 @@
 }
 
 .mockupArea {
-    padding: var(--space-xl);
+    padding: var(--space-2xl);
     height: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: var(--color-surface-active);
-    border-top: 1px solid var(--color-border-subtle);
+    background-color: var(--color-background);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 }
 
 .body {
