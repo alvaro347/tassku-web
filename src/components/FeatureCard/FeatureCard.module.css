@@ -21,6 +21,8 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background-color: var(--color-surface-active);
+    border-top: 1px solid var(--color-border-subtle);
 }
 
 .body {
