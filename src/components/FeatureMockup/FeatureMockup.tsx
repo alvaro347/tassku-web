@@ -1,6 +1,6 @@
 import styles from './FeatureMockup.module.css'
 
-/** Cross-platform: desktop window with overlapping tablet and phone */
+/** Cross-platform: desktop window with overlapping phone */
 export function PlatformMockup() {
     return (
         <div className={styles.platformWrap}>
@@ -33,16 +33,6 @@ export function PlatformMockup() {
                 </div>
             </div>
 
-            {/* Tablet */}
-            <div className={styles.tabletFrame}>
-                <div className={styles.tabletContent}>
-                    <div className={styles.miniTaskRow}><span className={styles.miniCheck} /><span className={styles.miniLine} data-w="75" /></div>
-                    <div className={styles.miniTaskRow}><span className={`${styles.miniCheck} ${styles.miniChecked}`} /><span className={`${styles.miniLine} ${styles.miniDone}`} data-w="50" /></div>
-                    <div className={styles.miniTaskRow}><span className={styles.miniCheck} /><span className={styles.miniLine} data-w="65" /></div>
-                    <div className={styles.miniTaskRow}><span className={styles.miniCheck} /><span className={styles.miniLine} data-w="40" /></div>
-                </div>
-            </div>
-
             {/* Phone */}
             <div className={styles.phoneFrame}>
                 <div className={styles.phoneNotch} />
@@ -50,6 +40,7 @@ export function PlatformMockup() {
                     <div className={styles.miniTaskRow}><span className={styles.miniCheck} /><span className={styles.miniLine} data-w="70" /></div>
                     <div className={styles.miniTaskRow}><span className={`${styles.miniCheck} ${styles.miniChecked}`} /><span className={`${styles.miniLine} ${styles.miniDone}`} data-w="55" /></div>
                     <div className={styles.miniTaskRow}><span className={styles.miniCheck} /><span className={styles.miniLine} data-w="60" /></div>
+                    <div className={styles.miniTaskRow}><span className={styles.miniCheck} /><span className={styles.miniLine} data-w="45" /></div>
                 </div>
             </div>
         </div>
@@ -63,7 +54,7 @@ export function OrganizeMockup() {
             <div className={styles.orgPanel}>
                 <div className={styles.orgPanelHeader}>
                     <span className={styles.orgViewTitle}>Today</span>
-                    <span className={styles.orgCount}>5 tasks</span>
+                    <span className={styles.orgCount}>4 tasks</span>
                 </div>
                 <div className={styles.orgItems}>
                     <div className={styles.orgTask}>
@@ -108,18 +99,6 @@ export function OrganizeMockup() {
                                 <span className={styles.orgPriority} data-level="high" />
                                 <span className={styles.orgLabel} data-color="emerald">Code</span>
                                 <span className={styles.orgDue}>Today</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.orgTask}>
-                        <div className={`${styles.orgCheckbox} ${styles.orgChecked}`}>
-                            <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        </div>
-                        <div className={styles.orgBody}>
-                            <div className={`${styles.orgTitle} ${styles.orgTitleDone}`}>Update dependencies</div>
-                            <div className={styles.orgMeta}>
-                                <span className={styles.orgPriority} data-level="low" />
-                                <span className={styles.orgLabel} data-color="violet">Chore</span>
                             </div>
                         </div>
                     </div>

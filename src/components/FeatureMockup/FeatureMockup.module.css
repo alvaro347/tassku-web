@@ -158,49 +158,23 @@
     margin-bottom: 2px;
 }
 
-/* Tablet */
-.tabletFrame {
-    position: absolute;
-    right: 12px;
-    bottom: 0;
-    width: 100px;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--color-border);
-    background-color: var(--color-surface-elevated);
-    box-shadow: var(--shadow-sm);
-    z-index: 2;
-    transition: transform var(--duration-base) var(--easing-standard);
-}
-
-.platformWrap:hover .tabletFrame {
-    transform: translateY(-5px) rotate(2deg);
-}
-
-.tabletContent {
-    padding: 8px 6px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
 /* Phone */
 .phoneFrame {
     position: absolute;
-    right: -4px;
-    bottom: 16px;
-    width: 64px;
+    right: 24px;
+    bottom: -4px;
+    width: 72px;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid var(--color-border);
     background-color: var(--color-surface-elevated);
     box-shadow: var(--shadow-md);
-    z-index: 3;
+    z-index: 2;
     transition: transform var(--duration-base) var(--easing-standard);
 }
 
 .platformWrap:hover .phoneFrame {
-    transform: translateY(-6px) rotate(-2deg);
+    transform: translateY(-4px) rotate(-2deg);
 }
 
 .phoneNotch {
