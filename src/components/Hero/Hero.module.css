@@ -73,42 +73,46 @@
 .downloadGroup {
     position: relative;
     display: inline-flex;
-    align-items: stretch;
 }
 
-.downloadLink {
-    display: inline-flex;
-}
-
-.downloadLink button {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.downloadChevron {
+.downloadTrigger {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0 var(--space-sm);
+    gap: var(--space-sm);
+    height: 44px;
+    padding: 0 var(--space-xl);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+    white-space: nowrap;
+    user-select: none;
+    border-radius: var(--radius-md);
     background-color: var(--color-accent);
     color: var(--color-text-on-accent);
-    border-left: 1px solid var(--color-accent-hover);
-    border-top-right-radius: var(--radius-md);
-    border-bottom-right-radius: var(--radius-md);
     transition: background-color var(--duration-fast) var(--easing-standard);
+    cursor: pointer;
 
     &:hover {
         background-color: var(--color-accent-hover);
     }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+.chevronOpen {
+    transform: rotate(180deg);
 }
 
 .platformMenu {
     position: absolute;
     top: calc(100% + var(--space-sm));
     left: 0;
-    right: 0;
-    background-color: var(--color-surface-elevated);
-    border: 1px solid var(--color-border);
+    min-width: 100%;
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-accent-hover);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-lg);
     overflow: hidden;
@@ -118,16 +122,30 @@
 .platformItem {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: var(--space-md);
     padding: var(--space-md) var(--space-lg);
-    font-size: var(--text-sm);
-    font-weight: var(--weight-medium);
-    color: var(--color-text);
+    color: var(--color-text-on-accent);
     transition: background-color var(--duration-fast) var(--easing-standard);
 
     &:hover {
-        background-color: var(--color-surface-hover);
+        background-color: var(--color-accent-hover);
     }
+}
+
+.platformInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.platformName {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+}
+
+.platformVersion {
+    font-size: var(--text-xs);
+    opacity: 0.75;
 }
 
 .preAlpha {
