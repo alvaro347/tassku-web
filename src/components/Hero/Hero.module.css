@@ -70,6 +70,17 @@
     display: inline-flex;
 }
 
+.preAlpha {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    color: var(--color-warning);
+    background-color: var(--color-warning-subtle);
+    padding: var(--space-2xs) var(--space-md);
+    border-radius: var(--radius-full);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
 .mockup {
     position: relative;
     width: 100%;

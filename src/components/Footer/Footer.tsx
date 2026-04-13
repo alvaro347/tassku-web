@@ -35,7 +35,7 @@ function Footer() {
                         &copy; {new Date().getFullYear()} Tassku. All rights reserved.
                     </span>
                     <a
-                        href="https://github.com/alvaro347/tassku-web"
+                        href="https://github.com/alvaro347/tassku-releases"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.social}

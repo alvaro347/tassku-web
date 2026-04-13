@@ -1,3 +1,4 @@
+import { Download } from 'lucide-react'
 import Button from '../Button/Button'
 import AppMockup from '../AppMockup/AppMockup'
 import styles from './Hero.module.css'
@@ -18,7 +19,8 @@ function Hero() {
                 <div className={styles.actions}>
                     <a href="#download">
                         <Button variant="primary" size="lg">
-                            Coming Soon
+                            <Download size={16} />
+                            Download
                         </Button>
                     </a>
                     <a href="#features">
@@ -27,6 +29,7 @@ function Hero() {
                         </Button>
                     </a>
                 </div>
+                <span className={styles.preAlpha}>pre-alpha</span>
             </div>
             <div className={styles.mockup}>
                 <AppMockup />
