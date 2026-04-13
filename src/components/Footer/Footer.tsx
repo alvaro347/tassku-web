@@ -13,8 +13,8 @@ function Footer() {
                     <div className={styles.column}>
                         <h4 className={styles.columnTitle}>Product</h4>
                         <a href="#features" className={styles.link}>Features</a>
-                        <a href="#pricing" className={styles.link}>Pricing</a>
-                        <a href="#download" className={styles.link}>Download</a>
+                        <a href="#sync" className={styles.link}>Sync</a>
+                        <a href="#organization" className={styles.link}>Organization</a>
                     </div>
 
                     <div className={styles.column}>

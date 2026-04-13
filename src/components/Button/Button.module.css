@@ -66,3 +66,9 @@
         background-color: var(--color-surface-active);
     }
 }
+
+.button:disabled {
+    opacity: 0.7;
+    cursor: default;
+    pointer-events: none;
+}

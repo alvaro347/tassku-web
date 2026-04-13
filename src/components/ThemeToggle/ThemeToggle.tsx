@@ -1,31 +1,30 @@
-import { Sun, Moon, Monitor } from 'lucide-react'
+import { Sun, Moon } from 'lucide-react'
 import { useTheme } from '../../hooks/useTheme'
 import styles from './ThemeToggle.module.css'
 
-const CYCLE: Array<'system' | 'light' | 'dark'> = ['system', 'light', 'dark']
-
 function ThemeToggle() {
-    const { theme, setTheme } = useTheme()
+    const { resolvedTheme, setTheme } = useTheme()
+    const isDark = resolvedTheme === 'dark'
 
-    const next = () => {
-        const idx = CYCLE.indexOf(theme)
-        setTheme(CYCLE[(idx + 1) % CYCLE.length])
-    }
-
-    const icon = theme === 'light'
-        ? <Sun size={18} />
-        : theme === 'dark'
-            ? <Moon size={18} />
-            : <Monitor size={18} />
+    const toggle = () => setTheme(isDark ? 'light' : 'dark')
 
     return (
         <button
-            className={styles.toggle}
-            onClick={next}
-            aria-label={`Theme: ${theme}`}
-            title={`Theme: ${theme}`}
+            className={styles.track}
+            onClick={toggle}
+            aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+            title={`Theme: ${resolvedTheme}`}
         >
-            {icon}
+            <span
+                className={`${styles.slider} ${isDark ? styles.sliderRight : ''}`}
+                aria-hidden="true"
+            />
+            <span className={`${styles.icon} ${!isDark ? styles.iconActive : ''}`}>
+                <Sun size={14} />
+            </span>
+            <span className={`${styles.icon} ${isDark ? styles.iconActive : ''}`}>
+                <Moon size={14} />
+            </span>
         </button>
     )
 }
