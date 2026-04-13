@@ -47,19 +47,28 @@ function Hero() {
                 <p className={styles.subtitle}>
                     A modern task manager that works across all your devices.
                     Organize projects, collaborate with your team, and stay
-                    productive — even offline.
+                    productive even offline.
                 </p>
                 <div className={styles.actions}>
                     <div className={styles.downloadGroup} ref={menuRef}>
+                        <a
+                            href={current.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.downloadLink}
+                        >
+                            <Button variant="primary" size="lg">
+                                {current.icon}
+                                Download for {current.name}
+                            </Button>
+                        </a>
                         <button
-                            className={styles.downloadTrigger}
+                            className={styles.downloadChevron}
                             onClick={() => setMenuOpen(!menuOpen)}
-                            aria-label="Select platform to download"
+                            aria-label="Select platform"
                             aria-expanded={menuOpen}
                         >
-                            {current.icon}
-                            Download for {current.name}
-                            <ChevronDown size={14} className={menuOpen ? styles.chevronOpen : ''} />
+                            <ChevronDown size={16} className={menuOpen ? styles.chevronOpen : ''} />
                         </button>
                         {menuOpen && (
                             <div className={styles.platformMenu}>
@@ -73,10 +82,8 @@ function Hero() {
                                         onClick={() => setMenuOpen(false)}
                                     >
                                         {p.icon}
-                                        <div className={styles.platformInfo}>
-                                            <span className={styles.platformName}>{p.name}</span>
-                                            <span className={styles.platformVersion}>{p.version}</span>
-                                        </div>
+                                        <span className={styles.platformName}>{p.name}</span>
+                                        <span className={styles.platformVersion}>{p.version}</span>
                                     </a>
                                 ))}
                             </div>

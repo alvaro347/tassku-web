@@ -73,32 +73,32 @@
 .downloadGroup {
     position: relative;
     display: inline-flex;
+    align-items: stretch;
 }
 
-.downloadTrigger {
+.downloadLink {
+    display: inline-flex;
+}
+
+.downloadLink button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.downloadChevron {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: var(--space-sm);
-    height: 44px;
-    padding: 0 var(--space-xl);
-    font-family: var(--font-sans);
-    font-size: var(--text-base);
-    font-weight: var(--weight-medium);
-    white-space: nowrap;
-    user-select: none;
-    border-radius: var(--radius-md);
+    padding: 0 var(--space-sm);
     background-color: var(--color-accent);
     color: var(--color-text-on-accent);
+    border-left: 1px solid var(--color-accent-hover);
+    border-top-right-radius: var(--radius-md);
+    border-bottom-right-radius: var(--radius-md);
     transition: background-color var(--duration-fast) var(--easing-standard);
-    cursor: pointer;
 
     &:hover {
         background-color: var(--color-accent-hover);
-    }
-
-    &:active {
-        transform: scale(0.98);
     }
 }
 
@@ -110,7 +110,7 @@
     position: absolute;
     top: calc(100% + var(--space-sm));
     left: 0;
-    min-width: 100%;
+    right: 0;
     background-color: var(--color-accent);
     border: 1px solid var(--color-accent-hover);
     border-radius: var(--radius-md);
@@ -122,20 +122,16 @@
 .platformItem {
     display: flex;
     align-items: center;
-    gap: var(--space-md);
+    gap: var(--space-sm);
+    width: 100%;
     padding: var(--space-md) var(--space-lg);
     color: var(--color-text-on-accent);
+    white-space: nowrap;
     transition: background-color var(--duration-fast) var(--easing-standard);
 
     &:hover {
         background-color: var(--color-accent-hover);
     }
-}
-
-.platformInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 .platformName {
@@ -146,6 +142,7 @@
 .platformVersion {
     font-size: var(--text-xs);
     opacity: 0.75;
+    margin-left: auto;
 }
 
 .preAlpha {
